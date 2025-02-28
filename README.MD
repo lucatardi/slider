@@ -10,8 +10,10 @@ npm install
 
 ## Run the project locally
 
+Running the command:
+
 ```sh
-npm install
+npm run dev
 ```
 
 the project will be running in your local machine at http://127.0.0.1:8080
