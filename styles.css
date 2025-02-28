@@ -1,0 +1,49 @@
+@keyframes backgroundShift {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.container {
+    ol {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: center;
+        padding: 50px 50px 0;
+    }
+    .thumbnails {
+        display: flex;
+        height: 20px;
+        justify-content: center;
+        gap: 10px;
+        button {
+            width: 150px;
+            border: none;
+            cursor: pointer;
+            background-color: lightgray;
+        }
+        button[data-current=true] {
+            animation: backgroundShift 3s linear;
+            background: linear-gradient(90deg, lightgray, gray);
+            background-size: 2000% 100%;
+        }
+    }
+    .controls {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 50px;
+        .prev,.next {
+            border: none;
+            border-radius: 5px;
+            padding: 10px 40px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 150px
+        }
+    }
+}
